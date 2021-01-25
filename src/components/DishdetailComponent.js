@@ -55,10 +55,19 @@ class DishDetail extends Component {
     }
 
     render() {
+        if (this.props.dish != null){
         return (
-            this.renderDish(this.props.dish)
+            <div class= "container">
+                <div className="row">
+                {this.renderDish(this.props.dish)}
+            </div>
+            </div>
         );
     }
+    else {
+        return (<div></div>);
+    }
+}
 }
 
 export default DishDetail;
